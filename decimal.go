@@ -1147,7 +1147,14 @@ func Sum(first Decimal, rest ...Decimal) Decimal {
 
 	return total
 }
+func SumAll(data []Decimal) Decimal {
+	total := Zero
+	for _, item := range data {
+		total = total.Add(item)
+	}
 
+	return total
+}
 // Avg returns the average value of the provided first and rest Decimals
 func Avg(first Decimal, rest ...Decimal) Decimal {
 	count := New(int64(len(rest)+1), 0)
