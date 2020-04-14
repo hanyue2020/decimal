@@ -16,7 +16,7 @@ NOTE: can "only" represent numbers with a maximum of 2^31 digits after the decim
 
 ## Install
 
-Run `go get github.com/shopspring/decimal`
+Run `go get github.com/hanyue2020/decimal`
 
 ## Usage
 
