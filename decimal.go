@@ -1244,14 +1244,14 @@ func (d NullDecimal) MarshalJSON() ([]byte, error) {
 // Trig functions
 
 // Atan returns the arctangent, in radians, of x.
-func (x Decimal) Atan() Decimal {
-	if x.Equal(NewFromFloat(0.0)) {
-		return x
+func (d Decimal) Atan() Decimal {
+	if d.Equal(NewFromFloat(0.0)) {
+		return d
 	}
-	if x.GreaterThan(NewFromFloat(0.0)) {
-		return x.satan()
+	if d.GreaterThan(NewFromFloat(0.0)) {
+		return d.satan()
 	}
-	return x.Neg().satan().Neg()
+	return d.Neg().satan().Neg()
 }
 
 func (d Decimal) xatan() Decimal {
